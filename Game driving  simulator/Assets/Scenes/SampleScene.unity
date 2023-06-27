@@ -633,5 +633,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  turnSpeed: 2
-  gravityMultiplier: 5
+  turnSpeed: 3
+  gravityMultiplier: 1
