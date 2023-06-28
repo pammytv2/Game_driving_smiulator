@@ -22,6 +22,11 @@ public class CarDrive : MonoBehaviour
         Accelerate();
         Turn();
         Fall();
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            Brake();
+        }
     }
 
     void Accelerate()
@@ -55,5 +60,11 @@ public class CarDrive : MonoBehaviour
     void Fall()
     {
         rb.AddForce(Vector3.down * gravityMultiplier * 10);
+    }
+
+    void Brake()
+    {
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
     }
 }
