@@ -64,7 +64,14 @@ public class CarDrive : MonoBehaviour
 
     void Brake()
     {
-        rb.velocity = Vector3.zero;
-        rb.angularVelocity = Vector3.zero;
+        // เบรกแบบทันที
+        rb.velocity *= 0.10f;
+        rb.angularVelocity *= 0.10f;
+
+        // ทำการ "drift" โดยเพิ่มแรงบิด (torque) ให้กับรถ
+        if (rb.velocity.magnitude > 0.10f)
+        {
+            rb.AddTorque(transform.up * turnSpeed * 10);
+        }
     }
 }
