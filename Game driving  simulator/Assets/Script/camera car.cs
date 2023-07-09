@@ -29,7 +29,7 @@ public class CameraFollow : MonoBehaviour
         Quaternion targetRotation;
         if (Input.GetKey(KeyCode.S))
         {
-            targetRotation =player.rotation* Quaternion.Euler(180, 0 , 60);
+            targetRotation =player.rotation* Quaternion.Euler(0, 180 ,0);
            // rearViewMirror.SetActive(true);
         }
         else
